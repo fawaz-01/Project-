@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>GitHub project </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-2">
+        <a class="navbar-brand" href="#">Mijn Blog</a>
+        <form class="d-flex me-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About me</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Log
+                                out</a></li>
+                    </ul>
+                <li>
+                    <button type="button" class="btn btn-dark position-relative p-0 m-1" data-bs-toggle="tooltip"
+                        title="Er zijn nieuwe posts">
+                        <i class="bi bi-bell-fill"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                        </span>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="alert alert-success alert-dismissible fade show m-5 mt-2 mb-1 p-3" role="alert">
+        <i class="bi bi-exclamation-circle"></i>
+        Je bent ingelogd
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="carousel-inner ">
+        <div class="carousel-item active m-0 mt-0">
+            <img src="https://online.york.ac.uk/wp-content/uploads/2023/05/software-1210x423.jpg" class="d-block w-100"
+                alt="...">
+            <div class="carousel-caption">
+                <h1>Student</h1>
+                <h4>Bit-codes</h4>
+                <a href="#" class="btn btn-lg btn-success">Contact me!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true"
+        data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Je gaat uitlogeen</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Niet opgeslagen wijzigingen zouden verloren kunnen gaan. Weet je zeker dat je wil uitlogeen?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Nee</button>
+                    <button type="button" class="btn btn-success" onclick="logout()">ja</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="text-center mt-1">skills</h1>
+        <div class="container col-lg m-4 border p-1">
+            <h3 class="container text-center border-bottom p-2">Programming Languages:</h3>
+            <div class="container border-bottom p-3">
+                <p class="text-center">HTML</p>
+                <div class="progress">
+                    <div class="progress-ba bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="75"></div>
+                </div>
+
+            </div>
+            <div class="container border-bottom p-3">
+
+                <p class="text-center">CSS</p>
+                <div class="progress">
+                    <div class="progress-ba bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="80"></div>
+                </div>
+            </div>
+            <div class="container border-bottom p-3">
+
+                <p class="text-center">JavaScript</p>
+                <div class="progress">
+                    <div class="progress-ba bg-primary" role="progressbar" style="width: 10%;" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="10"></div>
+                </div>
+            </div>
+            <div class="container border-bottom p-3">
+
+                <p class="text-center">Bootstrap</p>
+                <div class="progress">
+                    <div class="progress-ba bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                        aria-valuemin="0" aria-valuemax="90"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg m-4 border p-1">
+            <h3 class="container text-center border-bottom p-2">Certificates:</h3>
+            <div class="container text-center">
+                <h5>Bit Academy:</h5>
+                <div class="content border">
+                    <p class="contetn border-bottom p-1 m-2">data Engineering</p>
+                    <p class="contetn">Full stack webdevelopment</p>
+
+                </div>
+            </div>
+            <div class="container text-center">
+                <h5>Youtube Academy:</h5>
+                <div class="content border">
+                    <p class="contetn border-bottom p-1 m-2">JavaScript ES6</p>
+                    <p class="contetn">Bootstrap 9000</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="content">
+            <h1 class="projects text-center mt-2">Projects</h1>
+            <div class="row m-2">
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/237/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/500/250" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Project title</h3>
+                            <a href="#" class="card-link">Bekijk project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="text-center mt-1">Contact</h1>
+        <div class="container col-lg-8 m-4 p-1 text-center">
+            <div class="row">
+                <div class="col-md">
+                    <label class="form mt-1">Naam:</label><br>
+                    <input type="text" class="form-control"><br>
+                </div>
+                <div class="col">
+                    <label class="form mt-1">E-mail:</label><br>
+                    <input type="text" class="form-control"><br>
+                </div>
+            </div>
+            <div class="col text-center">
+                <label class="form">Bedrijf:</label><br>
+                <input type="text" class="form-control"><br>
+            </div>
+            <div class="col text-center">
+                <label class="form">Je bericht:</label><br>
+                <input type="text" class="form-control"><br>
+            </div>
+            <div class="submit text-center">
+                <input type="submit" class="verzend bg-primary text-white p-1 m-1" value="Verzend"><br>
+            </div>
+
+
+
+        </div>
+        <div class="col-lg m-4 p-1 d-flex justify-content-center">
+            <div class="content text-center justify-content-center">
+                <i class="bi bi-geo-alt-fill"></i><br>
+                <p>Amsterdam, Dam 1</p>
+                <div class="content p-4">
+                    <i class="bi bi-telephone-fill"></i>
+                    <p>06-12345678</p>
+                </div>
+                <div class="content">
+                    <i class="bi bi-envelope-fill"></i>
+                    <p>bit-academy@gmail.com</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#logoutModal").modal({
+                backdrop: 'static'
+            })
+        });
+    </script>
+</body>
+
+</html>
